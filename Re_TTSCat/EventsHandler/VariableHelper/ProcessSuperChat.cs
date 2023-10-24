@@ -10,7 +10,7 @@ namespace Re_TTSCat
             var rawDanmaku = Preprocess(Vars.CurrentConf.OnSuperChat, e);
             return rawDanmaku
                 .Replace("$PRICE", e.Danmaku.Price.ToString())
-                .Replace("$USER", e.Danmaku.UserName)
+                .Replace("$USER", e.Danmaku.GetCustomUserName())
                 .Replace("$DM", e.Danmaku.CommentText);
         }
     }

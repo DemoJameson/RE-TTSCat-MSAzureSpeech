@@ -7,7 +7,7 @@ namespace Re_TTSCat
         public static string ProcessInteract(DanmakuModel e, string template)
         {
             var rawDanmaku = Preprocess(template, e);
-            return rawDanmaku.Replace("$USER", e.UserName);
+            return rawDanmaku.Replace("$USER", e.GetCustomUserName());
         }
     }
 }

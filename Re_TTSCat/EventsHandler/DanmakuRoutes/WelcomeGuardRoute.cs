@@ -12,7 +12,7 @@ namespace Re_TTSCat
             if (!Conf.CheckUserEligibility(e)) return;
             Bridge.ALog("规则检查通过，准备朗读");
             await TTSPlayer.UnifiedPlay(Vars.CurrentConf.OnWelcomeGuard
-                .Replace("$USER", e.Danmaku.UserName)
+                .Replace("$USER", e.Danmaku.GetCustomUserName())
                 , true
             );
         }

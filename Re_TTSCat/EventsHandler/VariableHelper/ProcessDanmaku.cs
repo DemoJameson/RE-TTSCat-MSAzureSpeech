@@ -9,7 +9,7 @@ namespace Re_TTSCat
         {
             var rawDanmaku = Preprocess(template, e);
             return rawDanmaku
-                .Replace("$USER", e.UserName)
+                .Replace("$USER", e.GetCustomUserName())
                 .Replace("$DM", e.CommentText);
         }
         public static string ProcessDanmaku(DanmakuModel e) => ProcessDanmaku(e, Vars.CurrentConf.OnDanmaku);

@@ -331,6 +331,8 @@ namespace Re_TTSCat.Data
         /// </summary>
         public string OnInteractSpecialFollow { get; set; }
 
+        public string CustomUserNames { get; set; }
+
         public string MSSpeechKey { get; set; }
 
         public string MSSpeechRegion { get; set; }

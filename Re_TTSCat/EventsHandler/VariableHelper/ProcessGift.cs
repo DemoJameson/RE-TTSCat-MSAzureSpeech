@@ -11,7 +11,7 @@ namespace Re_TTSCat
             return rawDanmaku
                 .Replace("$GIFT", e.GiftName)
                 .Replace("$COUNT", e.GiftCount.ToString())
-                .Replace("$USER", e.UserName);
+                .Replace("$USER", e.GetCustomUserName());
         }
         public static string ProcessGift(DanmakuModel e) => ProcessGift(e, Vars.CurrentConf.OnGift);
         public static string ProcessGift(ReceivedDanmakuArgs e) => ProcessGift(e.Danmaku, Vars.CurrentConf.OnGift);
