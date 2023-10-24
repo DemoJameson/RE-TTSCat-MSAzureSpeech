@@ -232,7 +232,7 @@
                             </StackPanel>
                             <StackPanel Margin="0,50,0,0" HorizontalAlignment="Left">
                                 <local:IconTextBlock IconGlyph="&#xF007;" Text="自定义用户名"/>
-                                <TextBox Height="124" x:Name="TextBox_CustomUserNames" Width="200" ScrollViewer.VerticalScrollBarVisibility="Visible"  ToolTip="每行一条设置，格式为 UID=自定的用户名，例如 21222=DJ"/>
+                                <TextBox Height="124" x:Name="TextBox_CustomUserNames" Width="200" ScrollViewer.VerticalScrollBarVisibility="Visible" AcceptsReturn="True" ToolTip="每行一条设置，格式为 UID=自定的用户名，例如 21222=DJ"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="5,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Bottom">
