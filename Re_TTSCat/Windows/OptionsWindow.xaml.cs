@@ -54,7 +54,6 @@ namespace Re_TTSCat.Windows
 
         private async Task DarkenAsync()
         {
-            WebBrowser_Today.Visibility = Visibility.Hidden; // sry but we have to do this
             Grid_AnimationContainer.Visibility = Visibility.Visible;
 
             var animation = new DoubleAnimation
@@ -92,8 +91,6 @@ namespace Re_TTSCat.Windows
             await sb.BeginAsync();
             Grid_Master.Effect = null;
             Grid_AnimationContainer.Visibility = Visibility.Hidden;
-            if (Vars.CurrentConf.AllowDownloadMessage)
-                WebBrowser_Today.Visibility = Visibility.Visible;
         }
 
         private async void Button_CheckConnectivity_Click(object sender, RoutedEventArgs e)
@@ -641,16 +638,6 @@ namespace Re_TTSCat.Windows
             await OnLoad(null, null);
             _updateSliderAllowed = true;
             UpdateSliders(null, null);
-            // update information in the thanks field
-            // THIS IS NOT TELEMETRY, WE RESPECT OUR USERS' PRIVACY AND WILL NEVER DO SO
-            if (Vars.CurrentConf.AllowDownloadMessage)
-            {
-                WebBrowser_Today.Navigate("https://static-cn.itsmy.app:12306/files/today.html");
-            }
-            else
-            {
-                WebBrowser_Today.Visibility = Visibility.Hidden;
-            }
         }
 
         private void Button_DeleteCache_Click(object sender, RoutedEventArgs e)

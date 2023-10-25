@@ -939,12 +939,6 @@
             <Button x:Name="Button_Cancel" IsCancel="True" Margin="0,0,5,5" HorizontalAlignment="Right" Width="75" Height="22.5" VerticalAlignment="Bottom" ToolTip="放弃所有已修改的设置并关闭窗口" Click="Button_Cancel_Click">
                 <local:IconTextBlock IconForeground="DarkRed" IconGlyph="&#xF00D;" Text="取消"/>
             </Button>
-            <WebBrowser
-                x:Name="WebBrowser_Today"
-                Margin="85,0,165,4.5"
-                Height="50"
-                ScrollViewer.VerticalScrollBarVisibility="Visible"
-                VerticalAlignment="Bottom"/>
         </Grid>
         <Grid x:Name="Grid_AnimationContainer" Visibility="Hidden">
             <Grid.Resources>
